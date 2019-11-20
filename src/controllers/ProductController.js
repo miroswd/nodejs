@@ -10,6 +10,11 @@ module.exports = {
         return res.json(products)
     },
 
+    async show(req,res){  // Rota de detalhe, exibe um único produto
+        const product = await Product.findById(req.params.id);
+        return res.json(product)
+    },
+
     async store(req,res) { // Criando registros
         const product = await Product.create(req.body) // Métodos baseado no
         
@@ -18,6 +23,26 @@ module.exports = {
         // Enviando apenas os dados abaixo
         const {title, description, url} = product
         return res.json({title,description,url})
+    },
+
+    async update(req,res){ // Atualização de informações
+
+        // Busca pelo o id e atualiza com os dados passados pelo body
+
+        // {new: true} => Retorna o product atualizado para dentro da variável
+
+        const product = await Product.findByIdAndUpdate(req.params.id, req.body, {new:true});
+        return res.json(product)
+    },
+
+    async destroy(req,res){ // Deleta informações
+        
+        await Product.findByIdAndRemove(req.params.id)
+        
+        return res.json({msg:"O produto foi deletado"})
+
+        // return res.send();// -> retorna um status 200
+
     }
     
 };
