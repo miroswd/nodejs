@@ -103,4 +103,9 @@ no Insomnia foi criada uma nova request, create, dentro de um json, criado os ca
 crio o método show, para exibir um único produto
 show => Recebo na rota o parâmetro e com a funcionalidade findById(req.params.id) busco o produto pelo id
 
-Update
+Update => usando o findByIdAndUpdate 
+    busco o id pela url, passo as informações através do corpo
+    Adiciono um objeto {new:true} // Retornará o valor atualizado para a variável
+
+Delete => findByIdAndRemove
+    não preciso definir uma variável, pois o valor não será retornado ao usuário, até pq não existirá mais
