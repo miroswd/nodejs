@@ -1,0 +1,83 @@
+Dentro da pasta do node
+>>> npm install -y
+
+Vai gerar um package.json >>> Vai guardar a versão das dependências
+
+>>> npm install express
+    // express -> microframework que lida com rotas(endereços) e views(formas de visualização)
+
+// Criando o servidor - arquivo que iniciará toda a aplicação
+
+
+app.get('/', (req,res) => {
+    res.send("Hello World") // Vai criar um elemento em tela
+})
+
+app.get('/', (req,res)
+
+get       -> Método
+
+'/'       -> Rota raiz
+
+(req,res) -> Função
+    req // Fazendo requisição pro servidor, busca informações
+    res // Resposta à requisição
+
+
+/// NODEMON - Atualizar o conteúdo sem ter q rodar o servidor de novo ///
+>>> npm install -D nodemon
+
+// -D -> dependências de desenvolvimento, apenas no ambiente de desenvolvimento
+
+Adicionando dev aos scripts do package 
+    "dev":"nodemon server.js"
+    // npm run dev
+
+
+// DOCKER + mongoDb
+    // Permite fazer a containerização de recursos/softwares
+    containerização -> Cria uma máquina virtual, com as instalações,não mexe no sistema
+// Baixar o container do mongoDb
+>>> sudo docker pull mongo
+// subindo a máquina virtual
+>>> sudo docker run --name mongodb -p 27017:27017 -d mongo
+
+docker run: sobe a máquina virtual
+parametros:
+--name: como o container será chamado dentro do sistema
+-p: como o mongo estará rodando em outro sistema, precisa fazer o redirecionamento de porta
+-d: qual imagem, preset de container -> quando der o pull, vai fazer a requisição de uma imagem, no caso o mongo
+
+>>> docker ps    //Mostra as imagens que estão rodando
+>>> docker ps -a // Retorna all
+// para testar -> localhost:27017
+
+/// ROBO3T - verifica se os dados estão sendo persistidos no banco
+create 
+endereço localhost porta 27017
+
+>>> docker start mongodb
+
+
+// Conectando com o banco de dados
+
+>>> npm install mongoose // dependência de produção
+
+//mongoose é um ORM de bancos não relacionais com mongodb
+
+ORM -> Transforma as tabelas do banco de dados em objetos no javascript
+
+Object
+Relation
+Map 
+
+ORM -> Encapsula a lógica das operações do banco de dados através do código
+Ao invés de usar a linguagem do banco de dados, será utilizado apenas js
+
+
+// Criando o model(representa uma tabela no banco de dados) 
+gerando um arquivo dentro de src/models
+
+criando schemas -> Quais são os campos que um produto pode ter e que tipo de valor vão receber 
+
+>>> npm install require-dir
