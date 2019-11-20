@@ -81,3 +81,6 @@ gerando um arquivo dentro de src/models
 criando schemas -> Quais são os campos que um produto pode ter e que tipo de valor vão receber 
 
 >>> npm install require-dir
+
+// Reestruturação de arquivos
+adicionado ao src o routes.js

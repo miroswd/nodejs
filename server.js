@@ -31,17 +31,11 @@ nodeapi -> nome do schema
 
 // Inserindo o primeiro registro
 
-const Product = mongoose.model('Product'); // A partir dessa variável, devo ter acesso ao product para input de dados
-Product.create({
-    title:'React Native',
-    description:'Build native apps with react',
-    url:'http://github.com/facebook/react-native'
-})
+// const Product = mongoose.model('Product'); // A partir dessa variável, devo ter acesso ao product para input de dados
 
-// Definindo rotas
-app.get('/', (req,res) => {
-    res.send('Bom dia')
-})
+// Coringa que recebe todo tipo de requesição
+app.use('/api',require('./src/routes'))
+
 
 /*
 app.get('/', (req,res)
