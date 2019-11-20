@@ -90,3 +90,17 @@ adicionado ao src o routes.js
 Apenas configurado a base_url no enviroment e adicionado o método get
 
 // Criação de registro dentro da base de dados
+Criado um método store no controller, com a funcionalidade create
+
+no Insomnia foi criada uma nova request, create, dentro de um json, criado os campos correspondentes do model
+
+//CRUD
+- Create
+- Read
+- Update
+- Delete
+
+crio o método show, para exibir um único produto
+show => Recebo na rota o parâmetro e com a funcionalidade findById(req.params.id) busco o produto pelo id
+
+Update
