@@ -16,10 +16,14 @@ $ sudo docker start mongodb
 ```
 $ npm run dev
 ```
-<h2>Bibliotecas e Framework</h2>
+<h2>Ferramentas</h2>
 <ul>
+  <li>Docker</li>
   <li>Express - microframework</li>
+  <li>Insomnia</li>
+  <li>MongoDb<qli>
   <li>Mongoose</li>
   <li>Nodemon</li>
   <li>Require-dir</li>
+  <li>Robo3t</li>
 </ul>
