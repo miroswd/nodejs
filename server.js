@@ -12,6 +12,13 @@ app.listen(3001) // Ouvindo a porta 3001 -- localhost:3001
 // Iniciando o banco de dados
 mongoose.connect('mongodb://localhost:27017/nodeapi',{useNewUrlParser: true})
 
+/*
+Passando a url de conexão com o mongodb
+mongodb:// -> protocolo
+localhost:27017 -> endereço
+nodeapi -> nome do schema
+*/
+
 requireDir('./src/models')
 
 /*
@@ -22,12 +29,7 @@ Para não ter que ficar fazendo o require em todos os models
 
 */
 
-/*
-Passando a url de conexão com o mongodb
-mongodb:// -> protocolo
-localhost:27017 -> endereço
-nodeapi -> nome do schema
-*/
+
 
 // Inserindo o primeiro registro
 
