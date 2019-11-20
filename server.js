@@ -4,6 +4,7 @@ const requireDir = require('require-dir');
 
 // Inicialização do APP
 const app = express();
+app.use(express.json()); // Permite o envio de dados para a aplicação no formato json
 
 app.listen(3001) // Ouvindo a porta 3001 -- localhost:3001
 

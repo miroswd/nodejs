@@ -84,3 +84,9 @@ criando schemas -> Quais são os campos que um produto pode ter e que tipo de va
 
 // Reestruturação de arquivos
 adicionado ao src o routes.js
+
+
+// Insomnia
+Apenas configurado a base_url no enviroment e adicionado o método get
+
+// Criação de registro dentro da base de dados
