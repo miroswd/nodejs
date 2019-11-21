@@ -5,7 +5,12 @@ const Product = mongoose.model('Product')
 
 module.exports = {
     async index(req,res) { // Lista todos os registros dos produtos
-        const products = await Product.find();
+
+        const {page} = req.query; // ?page=1
+
+        const products = await Product.paginate({},{page, limit:10});
+                                    // no primeiro parâmetro é passado o where, uma condição
+                                    // segundo parâmetro, página atual e o limite por página
 
         return res.json(products)
     },
