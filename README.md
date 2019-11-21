@@ -19,6 +19,7 @@ $ npm run dev
 ```
 <h2>Ferramentas</h2>
 <ul>
+  <li>CORS</li>
   <li>Docker</li>
   <li>Express - microframework</li>
   <li>Insomnia</li>
