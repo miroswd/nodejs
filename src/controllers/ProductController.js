@@ -10,7 +10,7 @@ module.exports = {
 
         const products = await Product.paginate({},{page, limit:10});
                                     // no primeiro parâmetro é passado o where, uma condição
-                                    // segundo parâmetro, página atual e o limite por página
+                                    // segundo parâmetro, página atual (posso passar um valor padrão) e o limite por página
 
         return res.json(products)
     },
