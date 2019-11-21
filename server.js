@@ -2,9 +2,13 @@ const express = require('express'); // Retorna uma função
 const mongoose = require('mongoose');
 const requireDir = require('require-dir');
 
+const cors = require('cors');
 // Inicialização do APP
 const app = express();
 app.use(express.json()); // Permite o envio de dados para a aplicação no formato json
+
+app.use(cors());
+//app.use(cors(passo as configurações, quais os domínios são permitidos))
 
 app.listen(3001) // Ouvindo a porta 3001 -- localhost:3001
 

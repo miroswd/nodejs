@@ -126,3 +126,10 @@ para exibir outra página, é necessário passar pela url ?page=1
   "limit": 10, // Limite de registros por página
   "page": "3", // Página atual -> ?page=3
   "pages": 3   // Total de páginas
+
+// Adicionando CORS - permitindo que outros endereços acesse a api
+CORS -> Cross Access Origin Security -> Não permite o acesso do domínio
+
+>>> npm install cors
+
+importa no server
