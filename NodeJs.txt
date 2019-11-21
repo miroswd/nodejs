@@ -109,3 +109,20 @@ Update => usando o findByIdAndUpdate
 
 Delete => findByIdAndRemove
     não preciso definir uma variável, pois o valor não será retornado ao usuário, até pq não existirá mais
+
+// Paginação das listas - definindo um limite por página
+
+>>> npm install mongoose-paginate
+
+importando dentro do models
+
+no controller.index -> substituído find por paginate
+
+no Insomnia, ao gerar a lista, retorna um docs == documents
+
+para exibir outra página, é necessário passar pela url ?page=1
+
+  "total": 21, // Número de registros
+  "limit": 10, // Limite de registros por página
+  "page": "3", // Página atual -> ?page=3
+  "pages": 3   // Total de páginas
