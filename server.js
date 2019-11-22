@@ -38,7 +38,7 @@ Para não ter que ficar fazendo o require em todos os models
 
 // const Product = mongoose.model('Product'); // A partir dessa variável, devo ter acesso ao product para input de dados
 
-// Coringa que recebe todo tipo de requesição
+// Coringa que recebe todo tipo de requisição
 app.use('/api',require('./src/routes'))
 
 
@@ -49,7 +49,7 @@ get       -> Método
 
 '/'       -> Rota raiz
 
-(req,res) -> Função
+(req,res) -> Parâmetros
     req // Fazendo requisição pro servidor, busca informações
     res // Resposta à requisição
 */
