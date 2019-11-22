@@ -10,8 +10,6 @@ app.use(express.json()); // Permite o envio de dados para a aplicação no forma
 app.use(cors());
 //app.use(cors(passo as configurações, quais os domínios são permitidos))
 
-app.listen(3001) // Ouvindo a porta 3001 -- localhost:3001
-
 // >>> node server.js
 
 // Iniciando o banco de dados
@@ -55,3 +53,5 @@ get       -> Método
     req // Fazendo requisição pro servidor, busca informações
     res // Resposta à requisição
 */
+
+app.listen(3001) // Ouvindo a porta 3001 -- localhost:3001
